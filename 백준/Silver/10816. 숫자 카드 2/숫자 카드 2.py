@@ -1,12 +1,11 @@
 import sys
-n = int(sys.stdin.readline())
+from collections import Counter
 
-from collections import defaultdict
+n = int(input())
+num = map(int, input().split())
+n2 = int(input())
+num2 = map(int, input().split())
+c = Counter(num)
 
-a = defaultdict(int)
-for i in map(int,input().split()):
-    a[i] += 1
-
-m = int(input())
-for i in map(int,input().split()):
-    print(a[i],end=' ')
+for i in num2:
+    print(c[i], end= ' ')
