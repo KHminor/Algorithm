@@ -5,18 +5,19 @@ li.reverse()
 
 sm = 1
 bg = li[0]
-while sm <= bg:
+
+while bg >= sm:
     cnt = 0
-    mid = (sm+bg) //2
+    mid = (sm+bg) // 2
 
     for i in li:
         if i >= mid:
             cnt += i - mid
 
-
     if cnt >= m:
-        sm = mid+1
+        sm = mid + 1
     else:
-        bg = mid-1
+        bg = mid - 1
+
 
 print(bg)
