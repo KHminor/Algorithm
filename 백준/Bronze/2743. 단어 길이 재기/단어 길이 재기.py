@@ -1,2 +1,1 @@
-import sys
-print(len(sys.stdin.readline()[:-1]))
+print(len(input()))
