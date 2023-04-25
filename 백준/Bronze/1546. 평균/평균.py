@@ -1,12 +1,9 @@
-import sys
-n = int(sys.stdin.readline())
-li = list(map(int,sys.stdin.readline().split()))
-s = sum(li)
+ln = int(input())
+li = list(map(int,input().split()))
 mx = max(li)
-result = str(((s/n)/mx)*100)
-b1,b2 = result[-1],result[-2]
+hap = 0
 
-if b1 == b2:
-    print(format(float(result), '.6f'))
-else:
-    print(float(result))
+for i in li:
+  hap += i/mx*100
+
+print(hap/ln)
