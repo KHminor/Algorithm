@@ -1,6 +1,4 @@
-li = list(map(int,input().split()))
-result = 0
-for i in range(len(li)):
-    result += li[i]**2
-result = result%10
-print(result)
+hap = 0
+for i in list(map(int,input().split())):
+  hap += i**2
+print(hap%10)
