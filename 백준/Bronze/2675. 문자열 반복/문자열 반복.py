@@ -1,11 +1,6 @@
-T = int(input())
-for _ in range(T):
-    cnt,s = input().split()
-    cnt = int(cnt)
-    s = list(s)
-    result = ''
-
-    for i in s:
-        result += i*cnt
-
-    print(result)
+for _ in range(int(input())):
+    a, b = input().split()
+    a = int(a)
+    for i in b:
+        print(a*i, end='')
+    print()
