@@ -1,13 +1,10 @@
-import sys
-T = int(input())
-for _ in range(T):
-    li = list(sys.stdin.readline())[:-1]
-    ch_li = [0]*len(li)
+for _ in range(int(input())):
+    li = []
     cnt = 0
-    for i in range(len(li)):
-        if li[i] == 'O':
+    for i in input():
+        if i == 'O':
             cnt += 1
+            li = li + [cnt]
         else:
             cnt = 0
-        ch_li[i] = cnt
-    print(sum(ch_li))
+    print(sum(li))
