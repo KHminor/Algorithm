@@ -1,10 +1,9 @@
 for _ in range(int(input())):
-    li = []
+    go = 0
     cnt = 0
     for i in input():
-        if i == 'O':
-            cnt += 1
-            li = li + [cnt]
-        else:
-            cnt = 0
-    print(sum(li))
+        if i == 'O': 
+            go += 1
+            cnt += go
+        else: go = 0
+    print(cnt)
