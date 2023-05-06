@@ -1,6 +1,5 @@
-import sys
-n = int(sys.stdin.readline()) 
+n = int(input())
 result = 0
-for i in sys.stdin.readline().rstrip():
-    result += int(i) 
+for i in input():
+    result += int(i)
 print(result)
