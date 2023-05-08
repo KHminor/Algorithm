@@ -1,11 +1,8 @@
-req = input().upper()
-dic = {i:0 for i in set(req)}
-for i in req:
-  dic[i] += 1
-
-if list(dic.values()).count(max(list(dic.values()))) > 1:
-  print('?')
-else:
-  for i in list(dic.keys()):
-    if max(list(dic.values())) == dic.get(i):
-      print(i)
+st = input().upper()
+li = {i:0 for i in set(st)}
+for i in st: li[i] += 1
+result = []
+for i in li:
+    if li[i] == max(li.values()): result = result + [i]
+if len(result) > 1: print('?')
+else: print(result[-1])
