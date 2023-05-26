@@ -1,32 +1,28 @@
 import sys
-
-n,m = map(int,sys.stdin.readline().split())
-arr = [list(input()) for _ in range(n)]
-
-a = b = n1 = n2 = 0
-result = 2500
-
-while (b+7) < n:
-    while (a+7) < m:
-        for i in range(8):
-            for j in range(8):
-                if not((b+i)+(a+j))%2:
-                    if arr[b+i][a+j] != 'W':
-                        n1 += 1
-                    if arr[b+i][a+j] != 'B':
-                        n2 += 1
-                else:
-                    if arr[b+i][a+j] != 'B':
-                        n1 += 1
-                    if arr[b+i][a+j] != 'W':
-                        n2 += 1
-        if result > n1:
-            result = n1
-        if result > n2:
-            result = n2
-        a += 1
-        n1 = n2 = 0
-    a = 0
-
-    b += 1
-print(result)
+n, m = map(int, sys.stdin.readline().split())
+li = [list(sys.stdin.readline().rstrip('\n')) for _ in range(n)]
+fw_cnt = fb_cnt = 0
+cnt = 2500
+for i in range(n-7):
+    for j in range(m-7):
+        fw, fb = 'W', 'B'
+        check_fw_cnt = check_fb_cnt = 0
+        for y in range(8):
+            check_li = li[i+y][j:j+8]
+            for x in range(8):
+                if fw == check_li[x]:
+                    check_fw_cnt += 1
+                if fb == check_li[x]:
+                    check_fb_cnt += 1
+                if x != 7:
+                    if fw == 'W':
+                        fw = 'B'
+                    else:
+                        fw = 'W'
+                    if fb == 'W':
+                        fb = 'B'
+                    else:
+                        fb = 'W'
+        if cnt > min(check_fw_cnt, check_fb_cnt):
+            cnt = min(check_fw_cnt, check_fb_cnt)
+print(cnt)
