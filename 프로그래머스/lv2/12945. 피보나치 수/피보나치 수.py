@@ -7,3 +7,4 @@ def solution(n):
     li[n] = ((solution(n-1) + solution(n-2)))%1234567
     return li[n]%1234567
 
+
