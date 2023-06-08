@@ -1,5 +1,3 @@
-from datetime import datetime
-
 def solution(today, terms, privacies):
     year, month, day = map(int,today.split('.'))
     dic = {i.split(' ')[0]: int(i.split(' ')[1]) for i in terms}
