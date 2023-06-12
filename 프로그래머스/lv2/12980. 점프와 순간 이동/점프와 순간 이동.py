@@ -4,4 +4,3 @@ def solution(n):
         if n%2: cnt += 1
         n //= 2
     return cnt
-
