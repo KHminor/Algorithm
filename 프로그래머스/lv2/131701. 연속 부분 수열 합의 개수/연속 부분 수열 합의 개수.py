@@ -5,5 +5,5 @@ def solution(elements):
         dic[hap] = hap  
         for j in range(i+1, i+ln):
             hap += elements[j%ln]
-            if not dic[hap]: dic[hap] = hap            
+            dic[hap] = hap            
     return len([ i for i in list(dic.values()) if i != 0])
