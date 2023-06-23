@@ -7,11 +7,11 @@ def solution(cacheSize, cities):
     result, cnt, cnt_idx, cache_li = 0, 0, 0, deque(maxlen=cacheSize)
 
     while cnt < len(cities):
-        if cities[cnt] in cache_li: # 지역이 존재할 경우 가장 앞에 있는 값을 맨 뒤로 보내면서 +1 해주기
+        if cities[cnt] in cache_li: 
             del cache_li[cache_li.index(cities[cnt])]
             cache_li.append(cities[cnt])
             result += 1
-        else: # 없다면
+        else: 
             result += 5
             cache_li.append(cities[cnt])
             
