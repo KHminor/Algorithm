@@ -1,5 +1,5 @@
-import re
 from collections import Counter
+import re
 
 def solution(s):
     s = Counter(re.findall('\d+', s))
