@@ -1,1 +1,3 @@
-def solution(s): return s[len(s)//2] if len(s)%2 else s[len(s)//2-1:len(s)//2+1]
+def solution(s): 
+    ln = len(s)
+    return s[ln//2] if ln%2 else s[ln//2-1:ln//2+1]
