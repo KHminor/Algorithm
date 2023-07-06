@@ -1,8 +1,6 @@
 def solution(n):
-    li, result = [], 0
+    s = ''
     while n != 0:
-        li = li + [n%3]
+        s += str(n%3)
         n = n//3
-    li.reverse()
-    for i in range(len(li)): result += (3**(i))*li[i]
-    return result
+    return int(s,3)
