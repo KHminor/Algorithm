@@ -1,2 +1,1 @@
-print(int(input())**2)
-print(2)
+print(int(input())**2, 2)
