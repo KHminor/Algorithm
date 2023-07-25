@@ -1,1 +1,2 @@
-print(sum(range(1, int(input()))), 2)
+n = int(input())
+print(n*(n-1)//2, 2)
