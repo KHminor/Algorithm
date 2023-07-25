@@ -1,3 +1,1 @@
-a = input()
-print(a)
-print(1)
+print(input(), 1)
