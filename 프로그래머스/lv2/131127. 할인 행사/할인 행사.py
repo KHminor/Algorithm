@@ -5,5 +5,5 @@ def solution(want, number, discount):
         for j in range(_range):
             try: want_dict[discount[i+j]] += 1
             except: break
-        if want_dict == result_dict: result += 1
+        if want_dict == result_dict: result += 1 
     return result
