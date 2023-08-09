@@ -4,5 +4,5 @@ FROM USED_GOODS_BOARD T1 JOIN USED_GOODS_FILE T2
 WHERE T1.VIEWS = (SELECT MAX(VIEWS) AS VIEWS
                     FROM USED_GOODS_BOARD 
                     LIMIT 1
-                 )
+                 ) 
 ORDER BY T2.FILE_ID DESC
