@@ -1,14 +1,3 @@
-def bfs(i):
-    q = deque([i])
-    visit[i] = True
-    while q:
-        li[i] += 1 
-        s = q.popleft()
-        for x in arr[s]:
-            if not visit[x]:
-                visit[x] = True
-                q.append(x)
-
 import sys
 from collections import deque
 input = sys.stdin.readline
@@ -22,7 +11,15 @@ for _ in range(m):
 
 for i in range(1,n+1):
     visit = [False]*(n+1)
-    bfs(i)
+    q = deque([i])
+    visit[i] = True
+    while q:
+        li[i] += 1 
+        s = q.popleft()
+        for x in arr[s]:
+            if not visit[x]:
+                visit[x] = True
+                q.append(x)
     if li[i] > mx: mx = li[i]
 
 [print(i, end=' ') for i in range(1,n+1) if li[i] == mx]
