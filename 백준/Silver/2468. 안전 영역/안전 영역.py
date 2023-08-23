@@ -15,7 +15,7 @@ n = int(input())
 arr = [list(map(int,input().split())) for _ in range(n)]
 result = 0
 q = deque([])
-for height in range(0, max([max(arr[i]) for i in range(n)])):
+for height in range(0, max([max(arr[i]) for i in range(n)])+1):
     visit = [[0]*n for _ in range(n)]
     cnt = 0
     for i in range(n):
