@@ -3,6 +3,6 @@ FROM USED_GOODS_BOARD T1 JOIN USED_GOODS_FILE T2
     ON T1.BOARD_ID = T2.BOARD_ID
 WHERE T1.VIEWS = (SELECT MAX(VIEWS) AS VIEWS
                     FROM USED_GOODS_BOARD 
-                    LIMIT 1
+                    LIMIT 1 
                  ) 
 ORDER BY T2.FILE_ID DESC
