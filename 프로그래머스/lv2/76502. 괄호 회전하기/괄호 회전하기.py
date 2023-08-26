@@ -17,6 +17,6 @@ def solution(s):
                         flag = False
                         break  
                     
-        if flag and stack == []: cnt += 1
+        if flag and stack == []: cnt += 1 
         q.rotate(-1)
     return cnt
