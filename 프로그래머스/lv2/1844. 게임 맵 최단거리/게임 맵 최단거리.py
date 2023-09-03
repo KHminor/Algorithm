@@ -11,4 +11,4 @@ def solution(maps):
         for search in [[-1,0], [0,1], [1, 0], [0,-1]]:
             ny, nx = y+search[0], x+search[1] 
             if 0 <= nx <= mx_X_ln and 0 <= ny <= mx_Y_ln and maps[ny][nx] and not visit[ny][nx]: que.append([ny, nx, cnt+1])            
-    return -1 
+    return -1  
