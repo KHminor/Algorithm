@@ -1,14 +1,19 @@
-x = int(input())
-ch_li = [1000001]*(x+4)
-ch_li[1],ch_li[2],ch_li[3] = 0,1,1
+from collections import deque
+n = int(input())
+li = [0]*(n+1)
+q = deque([[n,0]])
 
-for i in range(4,x+1):
-    if i%3 == 0 and i%2 == 0:
-        ch_li[i] = min(ch_li[i//3],ch_li[i//2],ch_li[i-1])+1
-    elif i%3 == 0:
-        ch_li[i] = min(ch_li[i//3],ch_li[i-1])+1
-    elif i%2 == 0:
-        ch_li[i] = min(ch_li[i//2],ch_li[i-1])+1
-    else:
-        ch_li[i] = ch_li[i-1]+1
-print(ch_li[x])
+while True:
+    num,cnt = q.popleft()
+    if num == 1: 
+        print(cnt)
+        break
+    if not num%3 and not li[num//3]:
+        li[num//3] = cnt+1 
+        q.append([num//3,cnt+1])
+    if not num%2 and not li[num//2]: 
+        li[num//2] = cnt+1
+        q.append([num//2,cnt+1])
+    if not li[num-1]:
+        li[num-1] = cnt+1 
+        q.append([num-1,cnt+1])
