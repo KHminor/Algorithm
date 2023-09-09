@@ -18,7 +18,7 @@ def solution(begin, target, words):
                 if words[i] == target: 
                     idx += 1
                     flag = True
-                    break
+                    break 
                 que.append([words[i], idx+1])
                 words[i] = ''
         if flag: break
