@@ -6,6 +6,7 @@ def find(cnt,val,before):
     if cnt == n and result > val: 
         result = val
         return
+    if val > result: return
     for i in range(n):
         if not visit[i] and not visit2[before] and mtx[before][i]:
             visit[i],visit2[before],val = 1,1,val+mtx[before][i]
