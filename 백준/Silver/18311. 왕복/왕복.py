@@ -3,10 +3,12 @@ input = sys.stdin.readline
 
 n,k = map(int,input().split())
 li = list(map(int,input().rstrip('\n').split()))
-ch = li + li[::-1]
-rg = 0
-for i in range(len(ch)):
-    if rg<=k<rg+ch[i]:
-        print(n*2-i) if i>=n else print(i%n+1)
+li = li+ li[::-1]
+start = 0
+
+for i in range(2*n):
+    if start<=k<start+li[i]:
+        if i>n-1: print(2*n-i)
+        else: print(i+1)
         break
-    rg += ch[i]
+    start += li[i]
