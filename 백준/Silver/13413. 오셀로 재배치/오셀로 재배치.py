@@ -12,5 +12,5 @@ for _ in range(int(input())):
             if before[i] == "W": w_cnt += 1
             else: b_cnt += 1
 
-    if b_cnt > w_cnt: w_cnt,b_cnt = b_cnt,w_cnt
-    print(w_cnt)
+    if b_cnt > w_cnt: print(b_cnt)
+    else: print(w_cnt)
