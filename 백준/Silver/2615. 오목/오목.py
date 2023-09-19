@@ -1,39 +1,24 @@
 import sys
 input = sys.stdin.readline
+mtx = [list(map(int,input().rstrip('\n').split())) for _ in range(19)]
+result,r_mtx,flag = 0,(0,0),False
 
-board = []
 for i in range(19):
-    board.append(list(map(int, input().split())))
-
-# → ↓ ↘ ↗
-dx = [0, 1, 1, -1]
-dy = [1, 0, 1, 1]
-
-for x in range(19):
-    for y in range(19):
-        if board[x][y] != 0:
-            focus = board[x][y]
-
-            for i in range(4):
-                cnt = 1
-                nx = x + dx[i]
-                ny = y + dy[i]
-
-                while 0 <= nx < 19 and 0 <= ny < 19 and board[nx][ny] == focus:
-                    cnt += 1
-
-                    if cnt == 5:
-                        # 육목 체크
-                        if 0 <= x - dx[i] < 19 and 0 <= y - dy[i] < 19 and board[x - dx[i]][y - dy[i]] == focus:
-                            break
-                        if 0 <= nx + dx[i] < 19 and 0 <= ny + dy[i] < 19 and board[nx + dx[i]][ny + dy[i]] == focus:
-                            break
-                        # 육목이 아니면 성공한거니까 종료
-                        print(focus)
-                        print(x + 1, y + 1)
-                        sys.exit(0)
-
-                    nx += dx[i]
-                    ny += dy[i]
+    for j in range(19):
+        if mtx[i][j]:
+            li = []
+            for dy,dx in [[-1,1],[0,1],[1,1],[1,0]]: # 방향 찾기
+                if 0<=i+dy<19 and 0<=j+dx<19 and mtx[i+dy][j+dx] == mtx[i][j]:
+                    if 0<=i-dy<19 and 0<=j-dx<19:
+                        if mtx[i-dy][j-dx] != mtx[i][j]: li.append([dy,dx])
+                    else:li.append([dy,dx])
+            for dy,dx in li:
+                y,x,cnt = dy+i,dx+j,1
+                while 0<=y<19 and 0<=x<19 and mtx[y][x] == mtx[i][j]:
+                    y,x,cnt = y+dy,x+dx,cnt+1
+                if cnt == 5: 
+                    print(mtx[i][j])
+                    print(i+1,j+1)
+                    sys.exit(0)
 
 print(0)
