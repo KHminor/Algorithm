@@ -10,9 +10,8 @@ def solution(begin, target, words):
         if b == target: break
 
         for i in range(w_ln):
-            for j in range(len(words[i])): 
+            for j in range(len(words[i])):  
                 if b[j] == words[i][j]: visit[i] += 1
-        
         for i in range(w_ln):
             if len(begin)-1 == visit[i]:
                 if words[i] == target: 
