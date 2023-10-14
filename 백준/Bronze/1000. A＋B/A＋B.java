@@ -3,11 +3,10 @@ import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out));
+        InputStreamReader isr = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(isr);
 
-        StringTokenizer st = new StringTokenizer(reader.readLine(), " ");
-        writer.write((Integer.parseInt(st.nextToken()) + Integer.parseInt((st.nextToken())) + "\n"));
-        writer.flush();
-    }
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        System.out.println(Integer.parseInt(st.nextToken())+Integer.parseInt(st.nextToken()));
+    }    
 }
