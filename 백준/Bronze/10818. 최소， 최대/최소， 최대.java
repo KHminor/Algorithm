@@ -6,14 +6,14 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
         StringTokenizer st = new StringTokenizer(br.readLine());
-        int num = Integer.parseInt(st.nextToken());
-        int max = num;
-        int min = num;
 
-        for (int i = 0; i < n-1; i++) {
-            num = Integer.parseInt(st.nextToken());
-            if (num > max) max = num;
-            else if (min > num) min = num;
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+
+        for (int i = 0; i < n; i++) {
+            int num = Integer.parseInt(st.nextToken());
+            max = Math.max(max,num);
+            min = Math.min(min,num);
         }
         System.out.println(min + " " + max);
     }
