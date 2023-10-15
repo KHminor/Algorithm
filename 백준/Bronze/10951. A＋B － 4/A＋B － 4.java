@@ -1,18 +1,24 @@
 import java.io.*;
-import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        InputStreamReader isr = new InputStreamReader(System.in);
-        BufferedReader br = new BufferedReader(isr);
-        while (true) {
-            try {
-                StringTokenizer st = new StringTokenizer(br.readLine());
-                System.out.println(Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken()));
-            } catch (NullPointerException e) {
-                break;
-            }
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringTokenizer st;
+        String str;
+
+        while((str = br.readLine()) != null) {
+            st = new StringTokenizer(str);
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+
+            bw.write((a + b) + "\n");
+
         }
+        bw.flush();
+
     }
+
 }
