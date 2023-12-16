@@ -2,7 +2,7 @@ from collections import deque
 def solution(begin, target, words):
     if target not in words: return 0
     w_ln = len(words)  
-    que = deque([[begin,0]])
+    que = deque([[begin,0]]) 
 
     while True:
         b, idx = que.popleft()
