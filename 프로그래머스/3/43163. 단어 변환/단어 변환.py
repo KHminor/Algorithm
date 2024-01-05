@@ -6,7 +6,7 @@ def solution(begin, target, words):
 
     while True:
         b, idx = que.popleft()
-        visit, flag = [0]*w_ln, False 
+        visit, flag = [0]*w_ln, False  
         if b == target: break 
 
         for i in range(w_ln):
