@@ -17,12 +17,6 @@ for _ in range(35):
     else: 
         result = "Invalid"
 
-for i in range(6):
-    for j in range(6):
-        if not mtx[i][j]:
-            print("Invalid")
-            sys.exit(0)
-
 st,nx = [ord(start[0]),int(start[1])],[ord(first[0]),int(first[1])]
 if nx in [[st[0]+1,st[1]+2],[st[0]+1,st[1]-2],[st[0]-1,st[1]-2],[st[0]-1,st[1]+2],
                 [st[0]+2,st[1]+1],[st[0]+2,st[1]-1],[st[0]-2,st[1]-1],[st[0]-2,st[1]+1]] and result == "Valid": print("Valid")
