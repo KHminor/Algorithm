@@ -10,5 +10,5 @@ for i in range(n-1):
         else: check += 1
     else: result += 1
 
-if 'L' in set(seat): print(result)
-else: print(result-1)
+if result > n: print(n)
+else: print(result)
