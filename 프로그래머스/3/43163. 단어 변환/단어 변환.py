@@ -5,7 +5,7 @@ def solution(begin, target, words):
     que = deque([[begin,0]]) 
 
     while True:
-        b, idx = que.popleft()
+        b, idx = que.popleft()  
         visit, flag = [0]*w_ln, False  
         if b == target: break 
 
