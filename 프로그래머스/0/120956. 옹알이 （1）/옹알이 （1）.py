@@ -2,7 +2,7 @@ def solution(babbling):
     answer = 0
     
     for i in range(len(babbling)):
-        b_ln = len(babbling[i])
+        b_ln = len(babbling[i]) 
         if b_ln < 2: continue
         word = {"aya", "ye", "woo", "ma"}
         s = 0
