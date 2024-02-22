@@ -1,6 +1,6 @@
 def solution(numer1, denom1, numer2, denom2):
     
-    def LCM(a,b,gcd):
+    def LCM(a,b,gcd): 
         return b//gcd*a
     
     def GCD(a,b):
@@ -9,5 +9,7 @@ def solution(numer1, denom1, numer2, denom2):
         return b
     
     lcm = LCM(denom1,denom2, GCD(denom1,denom2))
-    x = GCD(lcm//denom1*numer1+lcm//denom2*numer2,lcm)
-    return [(lcm//denom1*numer1+lcm//denom2*numer2)//x,lcm//x]
+    a = lcm//denom1*numer1+lcm//denom2*numer2
+    x = GCD(a,lcm)
+
+    return [a//x,lcm//x]
