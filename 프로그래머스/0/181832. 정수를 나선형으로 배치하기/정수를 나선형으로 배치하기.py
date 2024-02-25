@@ -9,7 +9,7 @@ def solution(n):
             mtx[i][j] = s
             s += 1
             j += 1
-        i,j = i+1,j-1
+        i,j = i+1,j-1 
 
         while i <= vi and mtx[i][j] == 0:
             mtx[i][j] = s
