@@ -5,7 +5,7 @@ def solution(s, n):
         else:
             num = ord(i)
             x = 0
-            if 65 <= num <= 90: x = num+n if 90 >= num+n else (num+n)%90+64 
+            if i.isupper(): x = num+n if 90 >= num+n else (num+n)%90+64 
             else: x = num+n if 122 >= num+n else (num+n)%122+96
             li.append(chr(x)) 
     return "".join(li)
