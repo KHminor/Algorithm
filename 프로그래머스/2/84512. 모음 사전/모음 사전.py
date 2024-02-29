@@ -14,5 +14,4 @@ def solution(word):
                 li[idx] = i
                 if find(idx+1): return cnt
                 li[idx] = ''
-    cnt = 0
     return find(0)
