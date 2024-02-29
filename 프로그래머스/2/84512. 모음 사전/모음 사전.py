@@ -1,7 +1,6 @@
 cnt = 0
 
 def solution(word):
-    global cnt
     li = ['']*5
     
     def find(idx): 
