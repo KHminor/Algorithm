@@ -6,4 +6,4 @@ def solution(code):
         elif not i%2 and mode == 0: result.append(c)
         elif i%2 and mode == 1: result.append(c) 
 
-    return "EMPTY" if result == [] else "".join(result)
+    return "".join(result) or "EMPTY"
