@@ -8,4 +8,4 @@ def solution(n, lost, reserve):
         if dic[i] == 0:
             if dic.get(i-1) and dic[i-1] > 1: dic[i-1],dic[i] = dic[i-1]-1,1
             elif dic.get(i+1) and dic[i+1] > 1: dic[i+1],dic[i] = dic[i+1]-1,1
-    return sum([1 if i >= 1  else 0 for i in dic.values()])
+    return sum([1 if i >= 1 else 0 for i in dic.values()])
