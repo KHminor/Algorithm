@@ -1,10 +1,10 @@
 def solution(prices):
-    li = [i for i in range(len(prices)-1,-1,-1)]
-    for i in range(len(prices)):
-        cnt = 1
-        for j in range(i+1,len(prices)):
-            if prices[i] > prices[j]: 
-                li[i] = cnt
-                break
-            else: cnt += 1
-    return li
+    result = [i for i in range(len(prices)-1,-1,-1)]
+    stack = []
+    for i,p in enumerate(prices):
+        if stack:
+            while stack and stack[-1][1] > p:
+                idx,_ = stack.pop()
+                result[idx] -= result[i]
+        stack.append([i,p])
+    return result
