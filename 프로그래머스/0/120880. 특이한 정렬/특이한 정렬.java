@@ -11,8 +11,7 @@ class Solution {
                 li.add(num);
             }
             else {
-                ArrayList<Integer> li = new ArrayList<Integer>();
-                li.add(num);
+                ArrayList<Integer> li = new ArrayList<Integer>(Arrays.asList(num));
                 dic.put(x,li);
             }
         }
