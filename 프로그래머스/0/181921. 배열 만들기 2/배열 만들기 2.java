@@ -18,7 +18,6 @@ class Solution {
                 if (state) result.add(i);
             }
         }
-        if (result.size() == 0) result.add(-1);
-        return result.stream().mapToInt(Integer::intValue).toArray();
+        return (result.isEmpty())? new int[] {-1} : result.stream().mapToInt(Integer::intValue).toArray();
     }
 }
