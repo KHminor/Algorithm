@@ -11,7 +11,6 @@ class Solution {
         }
         
         boolean state = true;
-        
         while (true) {
             if (b%2==0) b/=2;
             else if (b%5==0) b/=5;
@@ -20,6 +19,7 @@ class Solution {
                 break;
             }
         }
+        
         return (b==1)?1:2;
     }
 }
