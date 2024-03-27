@@ -1,5 +1,5 @@
 class Solution {
     public int solution(int age) {
-        return 2024-age-1;
+        return 2024-age-1; 
     }
 }
