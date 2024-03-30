@@ -1,8 +1,8 @@
 def solution(park, routes):
     for i in range(len(park)):
         for j in range(len(park[i])):
-            if park[i][j] == "S": 
-                y,x = i,j
+            if park[i][j] == "S":  
+                y,x = i,j 
                 for k in routes:
                     op,n = k.split()
                     n = int(n)
