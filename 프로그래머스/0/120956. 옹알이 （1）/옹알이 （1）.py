@@ -7,7 +7,7 @@ def solution(babbling):
         word = {"aya", "ye", "woo", "ma"}
         s = 0 
         state = True 
-        while b_ln > s:
+        while b_ln > s: 
             if b_ln >= s+3 and babbling[i][s:s+3] in word: 
                 print(babbling[i][s:s+3])
                 word.remove(babbling[i][s:s+3])
