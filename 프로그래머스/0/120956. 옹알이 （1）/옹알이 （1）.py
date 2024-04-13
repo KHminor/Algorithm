@@ -12,7 +12,7 @@ def solution(babbling):
                 print(babbling[i][s:s+3])
                 word.remove(babbling[i][s:s+3])
                 s += 3
-            elif babbling[i][s:s+2] in word: 
+            elif babbling[i][s:s+2] in word:  
                 print(babbling[i][s:s+2])
                 word.remove(babbling[i][s:s+2])
                 s += 2
