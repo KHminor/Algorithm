@@ -6,5 +6,3 @@ def solution(dots):
         if slope(mydots.pop(), mydots.pop(i)) == slope(mydots.pop(), mydots.pop()):
             return 1
     return 0
-
-print(solution([[3, 5], [4, 1], [2, 4], [5, 10]]))
