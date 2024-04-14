@@ -4,5 +4,5 @@ def solution(dots):
     for i in range(3):
         mydots = dots[:]
         if slope(mydots.pop(), mydots.pop(i)) == slope(mydots.pop(), mydots.pop()):
-            return 1
+            return 1 
     return 0
