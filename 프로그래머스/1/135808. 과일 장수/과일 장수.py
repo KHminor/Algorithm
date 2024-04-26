@@ -4,5 +4,5 @@ def solution(k, m, score):
         cnt += 1
         if cnt == m: 
             result += i*m
-            cnt = 0
+            cnt = 0 
     return result
