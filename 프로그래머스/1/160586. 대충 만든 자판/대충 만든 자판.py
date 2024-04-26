@@ -11,7 +11,7 @@ def solution(keymap, targets):
             if dic.get(i): cnt += dic[i]
             else: 
                 cnt = 0
-                break
+                break 
         if cnt == 0: result.append(-1) 
         else: result.append(cnt)
     return result
