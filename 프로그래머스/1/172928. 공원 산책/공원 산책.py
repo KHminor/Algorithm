@@ -3,7 +3,7 @@ def solution(park, routes):
         for j in range(len(park[i])):
             if park[i][j] == "S":  
                 y,x = i,j  
-                for k in routes:
+                for k in routes: 
                     op,n = k.split()
                     n = int(n)
                     state = True
