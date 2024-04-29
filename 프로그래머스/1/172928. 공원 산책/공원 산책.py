@@ -4,7 +4,7 @@ def solution(park, routes):
             if park[i][j] == "S":  
                 y,x = i,j  
                 for k in routes: 
-                    op,n = k.split()
+                    op,n = k.split() 
                     n = int(n)
                     state = True
                     if op == "E" and x+n < len(park[i]): 
