@@ -9,7 +9,9 @@ q = deque([[s,0]])
 
 while q:
     now,cnt = q.popleft()
-    if now == g: result = min(result, cnt)
+    if now == g: 
+        result = min(result, cnt)
+        break
     else:
         for nt in [now+u,now-d]:
             if 0<nt<=f and not visit[nt]:
