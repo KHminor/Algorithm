@@ -14,7 +14,7 @@ def solution(a, b, c, d):
             result = (10*p_val+dic_keys[0])**2
         else: result = (dic_keys[0]+dic_keys[1])*abs(dic_keys[0]-dic_keys[1])
     elif len(dic_values) == 3: 
-        idx = dic_values.index(2)
+        idx = dic_values.index(2) 
         dic_keys.pop(idx)
         result = dic_keys[0]*dic_keys[1]
     else: result = min(dic_keys)
