@@ -5,7 +5,7 @@ def solution(a, b, c, d):
         if dic.get(i): dic[i] += 1
         else: dic[i] = 1
     dic_values = list(dic.values())
-    dic_keys = list(dic.keys())
+    dic_keys = list(dic.keys()) 
     if len(dic_values) == 1: result = dic_keys[0]*1111
     elif len(dic_values) == 2: 
         if max(dic_values) == 3: 
