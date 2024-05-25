@@ -8,7 +8,7 @@ let input = [];
 
 rl.on('line', function (line) {
     console.log(line)
-    input = [line];
+    input = [line]; 
 }).on('close',function(){
     str = input[0];
 });
