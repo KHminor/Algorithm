@@ -1,3 +1,3 @@
 a, b = input().strip().split(' ') 
-b = int(b)
+b = int(b) 
 print(a*b)    
