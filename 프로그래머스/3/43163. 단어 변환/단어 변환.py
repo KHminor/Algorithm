@@ -1,6 +1,6 @@
 from collections import deque
 def solution(begin, target, words):
-    if target not in words: return 0
+    if target not in words: return 0 
     w_ln = len(words)  
     que = deque([[begin,0]]) 
 
