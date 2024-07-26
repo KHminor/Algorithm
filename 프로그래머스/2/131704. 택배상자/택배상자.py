@@ -5,7 +5,7 @@ def solution(order):
     sub = deque([])
     idx = 0
     for i in range(1,len(order)+1):
-        if i != order[idx]: 
+        if i != order[idx]:  
             sub.appendleft(i)
         else:
             main.append(i)
