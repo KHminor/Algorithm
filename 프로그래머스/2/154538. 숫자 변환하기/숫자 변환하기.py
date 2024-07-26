@@ -3,7 +3,7 @@ def solution(x, y, n):
     if x == y: return 0
     visit = {x}
     q = deque([[x+n,1],[x*2,1],[x*3,1]])
-    while q:
+    while q: 
         val,cnt = q.popleft()
         if val == y: return cnt
         for i in [val+n,val*2,val*3]:
