@@ -12,7 +12,6 @@ public class Main {
         int[] change_li = new int[n];
         boolean[] check = new boolean[n];
         for (int i=0; i<n; i++) li[i] = Integer.parseInt(st.nextToken());
-        Arrays.sort(li);
         find_li(n, 0, li, check, change_li);
         System.out.println(result);
 
