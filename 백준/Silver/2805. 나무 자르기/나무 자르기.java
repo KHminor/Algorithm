@@ -24,7 +24,11 @@ public class Main {
             for (int num: li) {
                 if (num >mid) hap += num-mid;
             }
-            if (hap >= m) {
+            if (hap == m) {
+                result = mid;
+                break;
+            }
+            else if (hap >= m) {
                 start = mid+1;
                 result = mid;
             } else end = mid-1;
