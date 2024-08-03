@@ -15,7 +15,7 @@ public class Main {
         Arrays.sort(li);
 
         // 기준 높이 이분 탐색
-        int start = 0;
+        int start = 1;
         int end = li[n-1];
 
         while (start <= end) {
