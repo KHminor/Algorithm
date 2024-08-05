@@ -5,7 +5,7 @@ def solution(numbers):
     q = deque([(numbers[0],0)])
     for i,n in enumerate(numbers[1:]):
         while q and q[0][0]<n:
-            _,idx = q.popleft()
+            _,idx = q.popleft() 
             answer[idx] = n
         q.appendleft((n,i+1))
     return answer
