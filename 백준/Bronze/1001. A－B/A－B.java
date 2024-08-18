@@ -1,12 +1,9 @@
 import java.io.*;
-import java.util.StringTokenizer;
-
+import java.util.*;
 public class Main {
     public static void main(String[] args) throws IOException {
-        InputStreamReader isr = new InputStreamReader(System.in);
-        BufferedReader br = new BufferedReader(isr);
-
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        System.out.println(Integer.parseInt(st.nextToken()) - Integer.parseInt(st.nextToken()));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int[] li = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+        System.out.println(li[0]-li[1]);
     }
 }
