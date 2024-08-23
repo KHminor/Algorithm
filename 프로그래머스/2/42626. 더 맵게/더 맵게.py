@@ -13,7 +13,7 @@ def solution(s, K):
     heapq.heapify(s)
 
     while len(s) >= 2:
-        heapq.heappush(s,heapq.heappop(s)+heapq.heappop(s)*2)
+        heapq.heappush(s,heapq.heappop(s)+heapq.heappop(s)*2)  
         result += 1
         if s[0] >= K: return result
 
