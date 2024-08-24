@@ -16,11 +16,6 @@ public class Main {
         // 이분 탐색 시작
         System.out.println(B_Search(check, c));
 
-//        int result = 1000000000;
-//        for (int i=1; i<result_li.length; i++) result = Math.min(result, result_li[i]-result_li[i-1]);
-//        System.out.println(result);
-//        System.out.println(Arrays.toString(result_li));
-
     }
 
     public static int B_Search(int[] check, int c) {
