@@ -2,7 +2,7 @@ from collections import deque
 def solution(x, y, n):
     if x == y: return 0
     visit = {x}
-    q = deque([[x+n,1],[x*2,1],[x*3,1]])
+    q = deque([[x+n,1],[x*2,1],[x*3,1]])   
     while q: 
         val,cnt = q.popleft() 
         if val == y: return cnt
