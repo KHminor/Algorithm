@@ -11,7 +11,7 @@ class Solution {
     }
     
     static int find(String word) {
-        if (li.stream().map(String::valueOf).collect(Collectors.joining("")).equals(word)) return cnt;
+        if ((word.length()==li.size())&&(li.stream().map(String::valueOf).collect(Collectors.joining("")).equals(word))) return cnt;
         else if (li.size()==5) return -1;
         for (String w: words) {
             li.add(w); 
