@@ -13,7 +13,7 @@ public class Main {
 
 
         // 노드 연결
-        List<List<Integer>> li = IntStream.rangeClosed(0,N).mapToObj(i->new ArrayList<Integer>()).collect(Collectors.toList());
+        List<List<Integer>> li = IntStream.rangeClosed(0,N).mapToObj(ArrayList<Integer>::new).collect(Collectors.toList());
         for (int i=0; i<M; i++) {
             int[] node = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
             li.get(node[0]).add(node[1]);
@@ -41,7 +41,7 @@ public class Main {
         System.out.println(result.stream().map(String::valueOf).collect(Collectors.joining(" ")));
 
         // bfs
-        li.forEach(Collections::sort);
+        li.forEach(Collections::reverse);
 
         visit = new ArrayList<>(Collections.nCopies(N+1,false));
         result = new ArrayList<>(N);
