@@ -12,16 +12,19 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int[] NM = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
-        N = NM[0];
-        M = NM[1];
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        N = Integer.parseInt(st.nextToken());
+        M = Integer.parseInt(st.nextToken());
 
         mtx = new int[N][M];
         visit = new boolean[N][M];
         int[] result = {0,0};
 
         // mtx 값 추가
-        for (int i=0; i<N; i++) mtx[i] = Arrays.stream(br.readLine().split(" ")).mapToInt(Integer::parseInt).toArray();
+        for (int i=0; i<N; i++) {
+            st = new StringTokenizer(br.readLine());
+            for (int j=0; j<M; j++) mtx[i][j] = Integer.parseInt(st.nextToken());
+        }
 
 
 
