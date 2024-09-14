@@ -3,5 +3,5 @@ def solution(s):
     while s != '1': 
         zero_cnt += s.count('0')
         s = bin(len(s.replace('0', '')))[2:]
-        binary_cnt += 1 
+        binary_cnt += 1  
     return [binary_cnt, zero_cnt]
