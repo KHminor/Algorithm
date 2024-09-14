@@ -1,5 +1,5 @@
 def solution(s):
-    binary_cnt = zero_cnt = 0
+    binary_cnt = zero_cnt = 0 
     while s != '1': 
         zero_cnt += s.count('0')
         s = bin(len(s.replace('0', '')))[2:]
