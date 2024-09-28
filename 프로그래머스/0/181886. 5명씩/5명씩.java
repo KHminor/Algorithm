@@ -1,11 +1,10 @@
+import java.util.List;
+import java.util.ArrayList;
 class Solution {
     public String[] solution(String[] names) {
-        String[] answer = new String[names.length%5!=0?names.length/5+1:names.length/5];
+        List<String> li = new ArrayList<>();
         int idx = 0;
-        for (int i=0; i<names.length; i+=5) {
-            answer[idx] = names[i];
-            idx++;
-        }
-        return answer;
+        for (int i=0; i<names.length; i+=5) li.add(names[i]);
+        return li.toArray(new String[0]);
     }
 }
