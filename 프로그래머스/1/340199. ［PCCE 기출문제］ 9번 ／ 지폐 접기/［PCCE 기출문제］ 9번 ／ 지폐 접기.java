@@ -2,7 +2,7 @@ import java.util.Arrays;
 class Solution {
     public int solution(int[] wallet, int[] bill) {
         int answer = 0;
-        Arrays.sort(wallet);
+        Arrays.sort(wallet); 
         
         while (true) {
             if (bill[0]>bill[1]) Arrays.sort(bill);
