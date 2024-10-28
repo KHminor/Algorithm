@@ -2,7 +2,7 @@ import java.util.Arrays;
 class Solution {
     public String solution(String video_len, String pos, String op_start, String op_end, String[] commands) {
         int[] now = Arrays.stream(pos.split(":")).mapToInt(i->Integer.parseInt(i)).toArray();
-        int now_time = now[0]*60+now[1];
+        int now_time = now[0]*60+now[1]; 
         int[] s_op = Arrays.stream(op_start.split(":")).mapToInt(i->Integer.parseInt(i)).toArray();
         int s_time = s_op[0]*60+s_op[1];
         int[] e_op = Arrays.stream(op_end.split(":")).mapToInt(i->Integer.parseInt(i)).toArray();
