@@ -28,7 +28,7 @@ public class Main {
             if (dq.isEmpty()) break;
             while (!dq.isEmpty()) {
                 List<Integer> li = dq.pollFirst();
-                result = Math.max(result, li.get(3));
+                if (li.get(3) > result) result = li.get(3);
                 for (int x=0; x<4; x++) {
                     if ((0<=li.get(1)+nj[x] && li.get(1)+nj[x]<MNH[1]) && (0<=li.get(2)+nk[x] && li.get(2)+nk[x]<MNH[0]) && mtx[li.get(0)][li.get(1)+nj[x]][li.get(2)+nk[x]]==0) {
                         mtx[li.get(0)][li.get(1)+nj[x]][li.get(2)+nk[x]] = 1;
