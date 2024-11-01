@@ -15,7 +15,7 @@ public class Main {
 
         List<List<Integer>> citys = new ArrayList<>();
         for (int i=0; i<=N; i++) citys.add(new ArrayList<>());
-        long[] cost = new long[N+1];
+        int[] cost = new int[N+1];
         Arrays.fill(cost,-1);
 
         for (int i=0; i<M; i++) {
