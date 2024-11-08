@@ -8,7 +8,7 @@ class Solution {
         int[] e_op = Arrays.stream(op_end.split(":")).mapToInt(i->Integer.parseInt(i)).toArray();
         int e_time = e_op[0]*60+e_op[1]; 
         int[] e_video = Arrays.stream(video_len.split(":")).mapToInt(i->Integer.parseInt(i)).toArray();
-        int e_v_time = e_video[0]*60+e_video[1];   
+        int e_v_time = e_video[0]*60+e_video[1];    
         
         if (s_time<=now_time && now_time<=e_time) {
             now[0] = e_op[0];  
