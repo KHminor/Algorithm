@@ -24,6 +24,6 @@ public class Main {
     }
 
     public static boolean isNum(String str) {
-        return str.matches("-?\\d+(\\.\\d+)?");
+        return str.matches("\\d+");
     }
 }
