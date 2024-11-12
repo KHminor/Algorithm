@@ -1,37 +1,32 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-
+import java.io.*;
+import java.util.*;
 public class Main {
+    static List<Long> sosu = new ArrayList<>();
+    static long mx = 0;
     public static void main(String[] args) throws IOException {
-        BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        long N = Long.parseLong(br.readLine());
 
-        long T = Long.parseLong(bf.readLine());
-        long n;
-
-        for (int i = 0; i < T; i++) {
-            n = Long.parseLong(bf.readLine());
-
-            while (!isPrime(n)) {
-                n++;
-            }
-            bw.write(String.valueOf(n) + "\n");
-            bw.flush();
+        for (long i=0; i<N; i++) {
+            long num = Long.parseLong(br.readLine());
+            while (!f_prime(num)) num++;
+            bw.write(num+"\n");
         }
-        bw.close();
+
+        bw.flush();
     }
-
-    public static boolean isPrime(long a) {
-        if (a < 2)
-            return false;
-        for (long i = 2; i * i <= a; i++) {
-            if (a % i == 0) {
-                return false;
+    public static boolean f_prime(long num) {
+        boolean state = true;
+        if (num<2) state = false;
+        else  {
+            for (long j=2; j<=(long)Math.sqrt(num); j++) {
+                if (num%j==0) {
+                    state = false;
+                    break;
+                }
             }
         }
-        return true;
+        return state;
     }
 }
