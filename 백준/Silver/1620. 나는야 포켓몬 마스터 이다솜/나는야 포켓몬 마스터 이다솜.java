@@ -16,14 +16,10 @@ public class Main {
         }
         while (M>0) {
             String inp = br.readLine();
-            if (isNum(inp)) bw.write(pokemon[Integer.parseInt(inp)-1]+"\n");
+            if (Character.isDigit(inp.charAt(0))) bw.write(pokemon[Integer.parseInt(inp)-1]+"\n");
             else bw.write(dic.get(inp)+"\n");
             M--;
         }
         bw.flush();
-    }
-
-    public static boolean isNum(String str) {
-        return str.matches("\\d+");
     }
 }
