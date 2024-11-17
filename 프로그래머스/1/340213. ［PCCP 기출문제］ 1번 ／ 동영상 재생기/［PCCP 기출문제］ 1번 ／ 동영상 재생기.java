@@ -6,7 +6,7 @@ class Solution {
         int[] s_op = Arrays.stream(op_start.split(":")).mapToInt(i->Integer.parseInt(i)).toArray();
         int s_time = s_op[0]*60+s_op[1]; 
         int[] e_op = Arrays.stream(op_end.split(":")).mapToInt(i->Integer.parseInt(i)).toArray();
-        int e_time = e_op[0]*60+e_op[1]; 
+        int e_time = e_op[0]*60+e_op[1];  
         int[] e_video = Arrays.stream(video_len.split(":")).mapToInt(i->Integer.parseInt(i)).toArray();
         int e_v_time = e_video[0]*60+e_video[1];    
          
