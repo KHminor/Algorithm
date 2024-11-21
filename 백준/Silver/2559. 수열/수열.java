@@ -6,14 +6,15 @@ public class Main {
         int N = sc.nextInt();
         int K = sc.nextInt();
         int[] li = new int[N];
-        li[0]=sc.nextInt();
-        for (int i=1; i<N; i++) {
-            li[i]=li[i-1]+sc.nextInt();
+        int[] check = new int[N+1];
+        for (int i=0; i<N; i++) {
+            li[i]=sc.nextInt();
+            check[i+1]=li[i]+check[i];
         }
-        int mx = li[K-1];
-        for (int i=0; i<N-K; i++) {
-            mx = Math.max(mx,li[i+K]-li[i]);
+        int result = Integer.MIN_VALUE;
+        for (int i=0; i<=N-K; i++) {
+            result = Math.max(result, check[i + K] - check[i]);
         }
-        System.out.println(mx);
+        System.out.println(result);
     }
 }
