@@ -8,7 +8,7 @@ class Solution {
         Map<String,Integer> dic = new HashMap<>();
         int idx = 0;
         for (String f: friends) {
-            dic.put(f,idx);
+            dic.put(f,idx); 
             idx++;
         }
         
