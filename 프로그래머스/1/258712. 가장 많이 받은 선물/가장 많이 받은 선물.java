@@ -2,7 +2,7 @@ import java.util.*;
 class Solution {
     public int solution(String[] friends, String[] gifts) {
         StringTokenizer st;
-        int ln = friends.length;
+        int ln = friends.length; 
         
         // map으로 멤버 넘버링
         Map<String,Integer> dic = new HashMap<>();
