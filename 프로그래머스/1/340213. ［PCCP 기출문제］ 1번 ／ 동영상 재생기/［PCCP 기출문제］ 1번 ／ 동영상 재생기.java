@@ -11,7 +11,7 @@ class Solution {
         int e_v_time = e_video[0]*60+e_video[1];    
          
         if (s_time<=now_time && now_time<=e_time) {  
-            now[0] = e_op[0];    
+            now[0] = e_op[0];     
             now[1] = e_op[1];
         }
         
