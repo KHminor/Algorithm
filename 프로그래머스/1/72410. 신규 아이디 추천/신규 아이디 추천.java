@@ -8,7 +8,7 @@ class Solution {
         String x2 = s2(x1.toCharArray());
         String x3 = s3(x2.toCharArray());
         String x4 = s4(x3);
-        String x5 = x4.length()==0? "a":x4;
+        String x5 = x4.isEmpty()? "a":x4;
         String x6 = s6(x5);
         if (x6.length()<=2) {
             StringBuilder sb = new StringBuilder(x6);
