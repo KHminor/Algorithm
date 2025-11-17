@@ -1,41 +1,33 @@
 import java.io.*;
 import java.util.*;
+
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException  {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-
-        int n = Integer.parseInt(br.readLine());
-        List<Integer> li = new LinkedList<>();
-        for (int i=0; i<n; i++) {
-            StringTokenizer st = new StringTokenizer(br.readLine());
-            switch (st.nextToken()) {
+        ArrayList<Integer> arr = new ArrayList<>();
+        int N = Integer.parseInt(br.readLine());
+        while (N!=0) {
+            String[] now = br.readLine().split(" ");
+            switch (now[0]) {
                 case "push":
-                    li.add(Integer.parseInt(st.nextToken()));
+                    arr.add(Integer.parseInt(now[1]));
                     break;
                 case "pop":
-                    if (li.isEmpty()) bw.write(-1 + "\n");
-                    else {
-                        int num = li.remove(li.size()-1);
-                        bw.write(num + "\n");
-                    }
+                    bw.write((arr.isEmpty()?-1:arr.remove(arr.size()-1))+"\n");
                     break;
                 case "size":
-                    bw.write(li.size() + "\n");
+                    bw.write(arr.size()+"\n");
                     break;
                 case "empty":
-                    if (li.isEmpty()) bw.write(1 + "\n");
-                    else bw.write(0 + "\n");
+                    bw.write((arr.isEmpty()?1:0)+"\n");
                     break;
                 case "top":
-                    if (li.isEmpty()) bw.write(-1 + "\n");
-                    else {
-                        bw.write(li.get(li.size()-1) + "\n");
-                    }
+                    bw.write((arr.isEmpty()?-1:arr.get(arr.size()-1))+"\n");
                     break;
             }
+            N--;
         }
-        br.close();
         bw.flush();
         bw.close();
     }
