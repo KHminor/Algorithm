@@ -9,21 +9,19 @@ public class Main {
         bw.write("<");
         String[] NK = br.readLine().split(" ");
         int N = Integer.parseInt(NK[0]);
+        int c_N = N;
         int K = Integer.parseInt(NK[1]);
 
-        int[] arr = IntStream.rangeClosed(1,Integer.parseInt(NK[0])).toArray();
-        Set<Integer> s_li = new HashSet<>();
+        ArrayList<Integer> arr = IntStream.rangeClosed(1,N).boxed().collect(Collectors.toCollection(ArrayList::new));
         int now = -1;
         for (int i=0; i<N; i++) {
-            for (int j=0; j<K; j++) {
-                now=(now+1)%N;
-                while (s_li.contains(arr[now])) {
-                    now=(now+1)%N;
-                }
+            now = (now+K)%c_N;
+            bw.write(String.valueOf(arr.get(now)));
+            arr.remove(now--);
+            c_N--;
+            if (c_N!=0) {
+                bw.write(", ");
             }
-            s_li.add(arr[now]);
-            bw.write(String.valueOf(arr[now]));
-            if (i!=N-1) bw.write(", ");
         }
         bw.write(">");
         bw.flush();
