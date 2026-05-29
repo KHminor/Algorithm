@@ -5,9 +5,8 @@ public class Main {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        boolean state = true;
         for (int i=0; i<n; i++) {
-            if (!state) {
+            if (i%2!=0) {
                 for (int j=0; j<n; j++) {
                     System.out.print(n-j);
                 }
@@ -17,7 +16,6 @@ public class Main {
                 }
             }
             System.out.println();
-            state = !state;
         }
     }
 }
