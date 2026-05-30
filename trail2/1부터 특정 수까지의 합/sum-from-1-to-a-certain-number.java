@@ -6,8 +6,9 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
 
-        int result = 0;
-        for (int i=1; i<=n; i++) result+=i;
+        int result = (n+1)*(n/2);
+        if (n%2!=0) result += (n/2)+1;
         System.out.println(result/10);
+        
     }
 }
